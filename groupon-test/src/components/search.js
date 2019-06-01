@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
     }
     handlePagePlus(event){
         let pageNumber = this.state.pageNumber + 1;
-        fetch("http://www.omdbapi.com/?s="+this.state.value+"&apikey=5cb86053&page="+pageNumber).then(
+        fetch("https://www.omdbapi.com/?s="+this.state.value+"&apikey=5cb86053&page="+pageNumber).then(
             results => {
                 return results.json();
             }
@@ -41,7 +41,7 @@ class SearchBar extends React.Component {
     }
     handlePageMinus(event){
         let pageNumber = this.state.pageNumber - 1;
-        fetch("http://www.omdbapi.com/?s="+this.state.value+"&apikey=5cb86053&page="+pageNumber).then(
+        fetch("https://www.omdbapi.com/?s="+this.state.value+"&apikey=5cb86053&page="+pageNumber).then(
             results => {
                 return results.json();
             }
@@ -62,7 +62,7 @@ class SearchBar extends React.Component {
     }
 
     handleBlur(event) {
-        fetch("http://www.omdbapi.com/?apikey=5cb86053&s="+this.state.value).then(
+        fetch("https://www.omdbapi.com/?apikey=5cb86053&s="+this.state.value).then(
             results => {
                 return results.json();
             }

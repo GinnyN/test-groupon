@@ -24,7 +24,7 @@ class MovieBox extends React.Component {
     }
 
     handleClick(event) {
-        fetch("http://www.omdbapi.com/?i="+this.props.movie.imdbID+"&apikey=5cb86053").then(
+        fetch("https://www.omdbapi.com/?i="+this.props.movie.imdbID+"&apikey=5cb86053").then(
             results => {
                 return results.json();
             }
